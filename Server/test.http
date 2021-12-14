@@ -1,0 +1,49 @@
+GET http://localhost:3000/gemaelde
+################################
+GET http://localhost:3000/gemaelde/26
+################################
+DELETE http://localhost:3000/gemaelde/27
+################################
+POST http://localhost:3000/gemaelde
+Content-Type: application/json 
+
+{
+    "titel": "Test",
+    "jahr": "1900",
+    "preis": 50,
+    "k_id": 8,
+    "bild": "https://kunsthandelproarte.at/wp-content/uploads/m_ausg-437.jpg",
+    "signiert": true,
+    "t_id": 1,
+    "status": true
+}
+################################
+PATCH http://localhost:3000/gemaelde/4
+Content-Type: application/json 
+
+{
+    "status": true
+}
+###############################
+GET http://localhost:3000/kuenstler
+################################
+GET http://localhost:3000/kuenstler/7
+################################
+DELETE http://localhost:3000/kuenstler/7
+################################
+POST http://localhost:3000/kuenstler
+Content-Type: application/json 
+
+{
+    "vorname": "Jan",
+    "nachname": "Grzymek",
+    "geburtsjahr": "2002",
+    "sterbejahr": "2021"
+}
+###############################
+PATCH http://localhost:3000/kuenstler/7
+Content-Type: application/json 
+
+{
+    "alter": "2002 - 2021"
+}
